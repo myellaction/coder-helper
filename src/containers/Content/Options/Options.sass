@@ -1,0 +1,32 @@
+@import '@sass/variables'
+
+.options
+    position: relative
+    user-select: none
+
+    &__menu
+        padding: 12px 0
+        cursor: pointer
+
+    &__options-block
+        position: absolute
+        top: 100%
+        right: 0
+        width: 160px
+        background-color: #fff
+        border: 1px solid $border-color
+        padding: 12px 20px
+        border-radius: 12px
+        opacity: 0
+        visibility: hidden
+        transform: translateY(10px)
+        z-index: 3
+
+        &_opened
+            transform: translateY(0)
+            opacity: 1
+            visibility: visible
+            transition: all 0.2s
+
+    &__option
+        cursor: pointer

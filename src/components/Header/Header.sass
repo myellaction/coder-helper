@@ -1,0 +1,84 @@
+@import '../../assets/sass/variables'
+
+.header
+    background-color: $blue
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3)
+    position: fixed
+    width: 100vw
+    z-index: 10
+    top: 0
+    left: 0
+
+    &__block
+        display: flex
+        justify-content: space-between
+        height: 50px
+
+    &__logo-nav
+        display: flex
+
+    &__logo-block
+        display: flex
+        align-items: center
+        margin-right: 60px
+
+        img
+            height: 30px
+            width: 43px
+            margin-right: 12px
+
+    &__title
+        color: #fff
+
+    &__login-block
+        display: flex
+        align-items: center
+        justify-content: center
+
+        a:first-child
+            margin-right: 12px
+
+    &__nav-wrapper
+        display: flex
+
+    &__mobile-menu
+        display: none
+
+//media
+@media(max-width: 1199px)
+    .header
+        &__logo-nav
+            width: 82%
+
+        &__logo-block
+            flex-shrink: 0
+
+        &__nav-wrapper
+            width: 100%
+
+
+@media(max-width: 991px)
+    .header
+        &__nav-wrapper
+            display: none
+
+        &__login-block
+            margin-right: 12px
+
+        &__mobile-menu
+            display: flex
+
+@media(max-width: 575px)
+    .header
+        &__login-block
+            display: none
+
+
+
+
+
+
+
+
+
+

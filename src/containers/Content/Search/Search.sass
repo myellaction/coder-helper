@@ -1,0 +1,25 @@
+@import '../../../assets/sass/variables.sass'
+
+.search
+    &__block
+        display: flex
+        align-items: center
+        padding: 12px
+        border: 1px solid $border-color
+        background-color: #fff
+        border-radius: 8px
+        width: 302px
+
+        img
+            user-select: none
+            margin-right: 12px
+            width: 16px
+            height: 16px
+
+
+//media
+@media(max-width: 575px)
+    .search
+        &__block
+            width: 100%
+

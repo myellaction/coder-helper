@@ -1,0 +1,91 @@
+@import "@sass/variables"
+
+.form-checkbox
+
+    &__label
+        cursor: pointer
+        user-select: none
+        display: flex
+        align-items: center
+        //position: relative
+
+        > span
+            flex-shrink: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 8px
+            width: 1em
+            height: 1em
+            background: transparent
+            border: 1.6px solid $blue
+            border-radius: 2px
+            cursor: pointer
+            transition: all 150ms cubic-bezier(.4,.0,.23,1)
+            position: relative
+
+    &__checkbox
+        display: none
+
+        & + label:hover, &:focus + label
+            color: #fff
+
+        & + label:hover > span, &:focus + label > span
+            background: rgba(255,255,255,.1)
+
+        &:checked + label > span
+            border: .5em solid $blue
+            animation: shrink-bounce 150ms cubic-bezier(.4,.0,.23,1)
+
+        &:checked + label > span:before
+            content: ""
+            position: absolute
+            top: -1.6px //6.4px
+            left: -5.6px //3px
+            border-right: 2px solid transparent
+            border-bottom: 2px solid transparent
+            transform: rotate(45deg)
+            transform-origin: 0% 100%
+            animation: checkbox-check 200ms 150ms cubic-bezier(.4,.0,.23,1) forwards //250
+
+
+        @keyframes shrink-bounce
+            0%
+                transform: scale(1)
+
+            33%
+                transform: scale(.85)
+
+            100%
+                transform: scale(1)
+
+
+        @keyframes checkbox-check
+            0%
+                width: 0
+                height: 0
+                border-color: #fff
+                transform: translate3d(0,0,0) rotate(45deg)
+
+            33%
+                width: .2em
+                height: 0
+                transform: translate3d(0,0,0) rotate(45deg)
+
+            100%
+                width: .2em
+                height: .5em
+                border-color: #fff
+                transform: translate3d(0,-.5em,0) rotate(45deg)
+
+
+    &__title
+        color: $menu-color
+
+
+//media
+@media(max-width: 575px)
+    .form-checkbox
+        &__title
+            font-size: 14px
+

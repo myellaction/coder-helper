@@ -1,0 +1,31 @@
+@import '@sass/variables'
+
+.form-button
+    padding: 8px 12px
+    border-radius: 6px
+    color: #fff
+    transition: all 0.3s
+
+    &__submit
+        background-color: #3833CC
+        box-shadow: inset 0px -4px #5F5AF5
+
+        &:hover
+            box-shadow: inset 0px -6px #5F5AF5
+            transition: all 0.3s
+
+    &__reset
+        background-color: $red
+        box-shadow: inset 0px -4px #EF6565
+
+        &:hover
+            box-shadow: inset 0px -6px #EF6565
+            transition: all 0.3s
+
+
+//media
+@media(max-width: 575px)
+    .form-button
+        font-size: 14px
+
+

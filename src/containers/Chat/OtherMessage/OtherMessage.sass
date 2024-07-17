@@ -1,0 +1,51 @@
+@import '@sass/variables'
+
+.other-mes
+    display: flex
+    align-items: flex-end
+    width: 84%
+
+    &__block
+        display: flex
+        align-items: flex-end
+
+    &__wrapper
+        padding: 12px 12px 8px 12px
+        background-color: #EEEEF8
+        margin-left: -2px
+        border-top-left-radius: 8px
+        border-top-right-radius: 8px
+        border-bottom-right-radius: 8px
+
+    &__avatar
+        width: 42px
+
+    &__name
+        color: $blue
+        margin-bottom: 4px
+
+    &__content
+        line-height: 130%
+        margin-bottom: 4px
+
+    &__views-date
+        display: flex
+        justify-content: flex-end
+        align-items: center
+
+    &__views
+        margin-right: 12px
+
+    &__date
+        color: $hide-color
+
+
+//media
+@media(max-width: 575px)
+    .other-mes
+        width: 100%
+
+        .avatar
+            width: 30px
+            height: 30px
+

@@ -1,0 +1,30 @@
+@import '@sass/variables'
+
+.sorting-row
+    &__item
+        padding-top: 20px
+        padding-bottom: 20px
+        border-bottom: 1px solid $border-color
+
+        &:first-child
+            padding-top: 0
+
+        &:last-child
+            border-bottom: 0
+            padding-bottom: 0
+
+    &__type
+        display: flex
+        margin-bottom: 20px
+
+        img
+            margin-right: 8px
+
+    &__options
+        display: flex
+
+    &__desc-item
+        margin-right: 20px
+
+    &__desc-item label, &__asc-item label
+        display: flex

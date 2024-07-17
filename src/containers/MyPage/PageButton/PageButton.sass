@@ -1,0 +1,35 @@
+@import '@sass/variables'
+
+.page-btn
+    display: flex
+    align-items: center
+    border-radius: 6px
+    padding: 8px 12px
+    cursor: pointer
+
+    &__img
+        margin-right: 8px
+
+    &__type-message
+        border: 1px solid $border-color
+        background-color: #fff
+
+    &__type-add
+        background-color: #3833CC
+        border: 1px solid #3833CC
+        color: #fff
+
+    &__type-friend
+        background-color: $hide-color
+        border: 1px solid $hide-color
+        color: #fff
+
+
+//media
+@media(max-width: 575px)
+    .page-btn
+        &__title
+            display: none
+
+        &__img
+            margin-right: 0

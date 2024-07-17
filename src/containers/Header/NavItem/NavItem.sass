@@ -1,0 +1,48 @@
+.header
+    &__nav-item
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0 20px
+        transition: all 0.3s
+        color: #fff
+
+        &:hover
+            background-color: #9490FF
+            transition: all 0.3s
+
+        img
+            height: 18px
+
+    &__item-title
+        font-weight: bold
+        margin-left: 12px
+
+.selected
+    background-color: #3833CC
+
+    &:hover
+        background-color: #3833CC
+
+.menu-btn
+    display: none
+
+
+//media
+@media(max-width: 1199px)
+    .header
+
+        &__nav-item
+            width: 25%
+            padding: 0
+
+            img
+                height: 20px
+
+        &__item-title
+            display: none
+
+//media
+@media(max-width: 991px)
+    .menu-btn
+        display: flex

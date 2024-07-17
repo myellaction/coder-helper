@@ -1,0 +1,84 @@
+@import '@sass/variables'
+
+.chat
+    height: 100%
+
+    &__header
+        margin-bottom: 20px //32px
+
+    &__message-wrapper
+        margin-bottom: 12px
+
+        &:last-child
+            margin-bottom: 0
+
+    &__block
+        margin-bottom: 20px //32px
+        height: calc(100% - 82px) //400px
+        margin-left: 20px
+        width: calc(100% - 20px)
+
+    &__bar
+        height: 100%
+
+    &__block-inner
+        padding-right: 20px
+
+    &__block-panel
+        height: calc(100% - 62px) //494px
+        position: relative
+        width: 100%
+
+    &__day
+        margin: 20px 0
+        color: $hide-color
+        text-align: center
+
+        &:first-child
+            margin-top: 0
+
+    &__panel
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        padding-left: 20px
+        padding-right: 20px
+        min-height: 62px
+
+//ScrollBar
+.simplebar-content-wrapper
+    overscroll-behavior-y: none
+
+.simplebar-track
+    width: 4px !important
+    border-radius: 4px !important
+    background-color: transparent
+
+.simplebar-scrollbar
+    border-radius: 4px
+    width: 4px
+    background-color: #c6cfd3
+
+    &::before
+        background-color: #c6cfd3
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        transition: opacity 0.2s 1s linear
+
+//чтоб убрать появление квадратов
+.simplebar-wrapper, .simplebar-wrapper *
+    outline: none
+
+.simplebar-placeholder
+    display: none
+
+
+//media
+@media(max-width: 575px)
+    .chat
+        &__panel
+            min-height: 44px
+

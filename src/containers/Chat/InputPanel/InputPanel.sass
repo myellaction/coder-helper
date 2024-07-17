@@ -1,0 +1,63 @@
+@import '@sass/variables'
+
+.chat-panel
+    display: flex
+    align-items: flex-end
+    background-color: #EEEEF8
+    border-radius: 8px
+
+    img
+        padding: 12px
+
+    label
+        user-select: none
+
+    &__file-label
+        cursor: pointer
+
+    &__text-wrapper
+        padding: 20px 0
+        display: flex
+        align-items: flex-end
+        width: 100%
+
+    &__area
+        resize: none
+        width: 100%
+        min-height: 18px
+        max-height: 80px
+        height: 18px
+        background-color: transparent
+        overflow: hidden
+        overscroll-behavior-y: none
+        padding-left: 8px
+
+    &__area::-webkit-scrollbar
+        width: 4px
+        height: 4px
+
+    &__area::-webkit-scrollbar-track
+        border-radius: 4px
+        background: transparent
+
+    &__area::-webkit-scrollbar-thumb
+        border-radius: 4px
+        background: $hide-color
+        cursor: default
+
+    &__area::-webkit-scrollbar-thumb:hover
+        background: $hide-color
+
+    &__area::-webkit-scrollbar-thumb:active
+        background: $hide-color
+
+    &__btn
+        user-select: none
+
+
+//media
+@media(max-width: 575px)
+    .chat-panel
+        &__text-wrapper
+            padding: 12px 0
+

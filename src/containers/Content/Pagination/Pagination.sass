@@ -1,0 +1,53 @@
+@import '@sass/variables'
+
+.pagination
+    display: flex
+    justify-content: center
+    user-select: none
+
+    &__block
+        display: flex
+
+    &__space
+        cursor: pointer
+
+        &:hover
+            background-color: #fff
+
+    &__page
+        height: 38px
+        padding: 0 16px
+        border: 1px solid #d5d6e0
+        display: flex
+        align-items: center
+        border-right: none
+        transition: all 0.3s
+        background-color: #fff
+
+        &:last-child
+            border-right: 1px solid #d5d6e0
+
+        &:hover
+            background-color: #d5d6e0
+            transition: all 0.3s
+
+    &__page-selected
+        background-color: $hide-color
+        color: #fff
+        font-weight: 600
+
+        &:hover
+            background-color: $hide-color
+
+    &__prev
+        border-top-left-radius: 6px
+        border-bottom-left-radius: 6px
+        cursor: pointer
+
+    &__next
+        border-top-right-radius: 6px
+        border-bottom-right-radius: 6px
+        cursor: pointer
+
+
+

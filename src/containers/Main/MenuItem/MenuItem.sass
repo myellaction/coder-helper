@@ -1,0 +1,53 @@
+@import '@sass/variables'
+
+.menu
+    &__item
+        display: flex
+        justify-content: space-between
+        padding: 10px 20px
+
+        &:first-child
+            padding-top: 20px
+
+        &:last-child
+            padding-bottom: 20px
+
+    &__item:hover &__item-arrow
+        opacity: 1
+        visibility: visible
+        transition: all 0.3s
+        transform: translateX(0px)
+
+    &__item-active &__item-arrow
+        opacity: 1
+        visibility: visible
+        transition: all 0.3s
+        transform: translateX(0px)
+
+    &__item-arrow
+        opacity: 0
+        visibility: hidden
+        transform: translateX(-10px)
+        transition: all 0.3s
+
+    &__item-content
+        display: flex
+        align-items: center
+
+    &__item-img-block
+        margin-right: 8px
+        position: relative
+
+    &__new-mes
+        position: absolute
+        top: -12%
+        right: -12%
+        height: 8px
+        width: 8px
+        border-radius: 8px
+        background-color: $blue
+
+
+
+
+

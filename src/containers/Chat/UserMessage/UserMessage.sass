@@ -1,0 +1,67 @@
+@import '@sass/variables'
+
+.user-mes
+    display: flex
+    justify-content: flex-end
+
+    &:hover &__img-block
+        opacity: 1
+        visibility: visible
+        transition: all 0.3s
+
+    &__img-block
+        display: flex
+        align-items: center
+        margin-right: 40px
+        opacity: 0
+        visibility: hidden
+        transition: all 0.3s
+
+    &__img
+        cursor: pointer
+
+    &__inner
+        display: flex
+        justify-content: flex-end
+        width: 76.4%
+
+    &__block
+        display: flex
+        align-items: flex-end
+        justify-content: flex-end
+
+    &__wrapper
+        padding: 12px 12px 8px 12px
+        background-color: $blue
+        margin-right: -2px
+        border-top-left-radius: 8px
+        border-top-right-radius: 8px
+        border-bottom-left-radius: 8px
+        color: #fff
+
+    &__content
+        line-height: 130%
+        margin-bottom: 4px
+
+    &__views-date
+        display: flex
+        justify-content: flex-end
+        align-items: center
+
+    &__views
+        margin-right: 12px
+
+
+//media
+@media(max-width: 575px)
+    .user-mes
+        justify-content: flex-start
+
+        &__img-block
+            margin-right: 17px
+
+        &__inner
+            width: 100%
+
+
+

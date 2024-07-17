@@ -1,0 +1,44 @@
+@import '@sass/variables'
+
+.article-options
+    position: relative
+
+    &__options-dots
+        padding: 12px 0
+        cursor: pointer
+        user-select: none
+
+    &__options-img
+        user-select: none
+
+    &__options-block
+        position: absolute
+        top: 100%
+        right: 0
+        background-color: #fff
+        border: 1px solid $border-color
+        padding: 12px 20px
+        border-radius: 12px
+        width: 160px
+        opacity: 0
+        visibility: hidden
+        transform: translateY(10px)
+
+        &_opened
+            transform: translateY(0)
+            opacity: 1
+            visibility: visible
+            transition: all 0.2s
+
+    &__option
+        padding: 8px 0
+        cursor: pointer
+        display: flex
+        align-items: center
+        position: relative
+
+    &__option-title
+        margin-right: 12px
+
+        &:last-child
+            margin-right: 0

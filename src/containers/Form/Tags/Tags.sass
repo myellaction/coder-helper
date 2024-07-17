@@ -1,0 +1,70 @@
+@import "@sass/variables"
+
+.tags
+    &__title
+        margin-bottom: 4px
+
+    &__desc
+        font-size: 12px
+        margin-bottom: 20px
+
+        &_not-default
+            margin-bottom: 8px
+
+    &__block
+        display: flex
+        flex-wrap: wrap
+        border-radius: 8px
+        border: 1px solid $border-color
+        padding: 4px 12px 12px 12px
+
+        &_focus
+            border: 1px solid $blue
+
+        &_variants
+            border-bottom-left-radius: 0
+            border-bottom-right-radius: 0
+
+    &__input
+        flex-grow: 1
+        color: $menu-color
+        height: 22px
+        display: flex
+        margin-top: 8px
+
+    &__skills-block
+        position: relative
+
+    &__variants
+        border-left: 1px solid $blue
+        border-bottom: 1px solid $blue
+        border-right: 1px solid $blue
+        border-bottom-left-radius: 8px
+        border-bottom-right-radius: 8px
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 3
+        width: 100%
+        background-color: #fff
+
+    &__variant
+        padding: 12px
+        cursor: pointer
+
+        &:last-child
+            border-bottom-right-radius: 8px
+            border-bottom-left-radius: 8px
+
+        &:hover
+            background-color: $border-color
+
+    &__skills
+        display: none
+
+
+
+
+
+
+

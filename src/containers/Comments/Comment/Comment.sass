@@ -1,0 +1,58 @@
+@import '@sass/variables'
+
+.comment
+    margin-bottom: 20px
+    background-color: #fff
+    border: 1px solid $border-color
+    border-radius: 8px
+    padding: 12px 20px 20px 12px
+
+    &:last-child
+        margin-bottom: 0
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 4px
+
+    &__author-info
+        display: flex
+        align-items: center
+
+    &__avatar
+        margin-right: 8px
+
+    &__name
+        color: $menu-color
+
+    &__created
+        color: $hide-color
+
+    &__content
+        margin-left: 38px
+        margin-bottom: 12px
+        line-height: 150%
+
+    &__buttons
+        display: flex
+        justify-content: flex-end
+
+        svg
+            cursor: pointer
+
+            path
+                transition: all 0.3s
+
+    &__like
+        margin-right: 12px
+
+    &__like:hover, &__dislike:hover
+        svg
+            path
+                fill: $img-hover
+                transition: all 0.3s
+
+
+
+

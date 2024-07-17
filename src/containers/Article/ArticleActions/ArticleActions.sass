@@ -1,0 +1,48 @@
+@import '@sass/variables'
+
+.article-actions
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &__buttons
+        display: flex
+
+        & > div
+            display: flex
+            align-items: center
+            color: $hide-color
+            margin-right: 20px
+            cursor: pointer
+
+            &:last-child
+                margin-right: 0
+
+            svg
+                margin-right: 8px
+
+                path
+                    transition: all 0.3s
+
+            svg:last-child
+                margin-right: 0
+
+    &__like:hover, &__dislike:hover
+        svg
+            path
+                fill: $img-hover
+                transition: all 0.3s
+
+    &__comment:hover
+        svg
+            path
+                stroke: $img-hover
+                transition: all 0.3s
+
+    &__commented, &__commented:hover
+        color: $blue !important
+
+        svg
+            path
+                stroke: $blue
+

@@ -1,0 +1,119 @@
+@import normalize
+@import reset
+@import variables
+
+//fonts
+@import '../fonts/Inter/stylesheet.css'
+
+html
+    overflow-x: hidden
+    margin-right: calc(-1 * (100vw - 100%))
+
+body
+    font-family: 'Inter', sans-serif
+    color: $text-color
+    background-color: $bg-color
+
+html, *
+    box-sizing: border-box
+
+img
+    display: block
+
+a
+    color: $text-color
+    text-decoration: none
+    display: block
+
+input, textarea
+    border: none
+    outline: none
+    padding: 0
+    color: $text-color
+
+    &::placeholder
+        color: $hide-color
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus
+    -webkit-text-fill-color: $text-color
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset
+    box-shadow: 0 0 0px 1000px #fff inset
+    transition: background-color 5000s ease-in-out 0s
+    caret-color: $text-color
+
+button
+    border: none
+    outline: none
+    background: none
+    cursor: pointer
+    padding: 0
+
+.container
+    padding: 0 40px
+
+.wrapper
+    max-width: 1400px //1140px
+    margin: 0 auto
+
+.bold
+    font-size: 20px
+    font-weight: bold
+
+.menu-title
+    font-size: 20px
+    font-weight: 600
+    color: $menu-color
+
+.semi-bold
+    font-weight: 600
+
+.small
+    font-size: 14px
+
+.hide
+    opacity: 0
+    visibility: hidden
+
+.none
+    display: none
+
+.h-60
+    height: 60px
+
+.h-100
+    height: 100px !important
+
+.h-150
+    height: 150px !important
+
+.no-sides-padding
+    padding-left: 0
+    padding-right: 0
+
+.no-transition
+    transition: none
+
+.text-link
+    transition: all 0.3s
+
+    &:hover
+        color: $hide-color
+        transition: all 0.3s
+
+
+//media
+@media(max-width: 1199px)
+    .container
+        padding: 0 20px
+
+@media(max-width: 575px)
+    .container
+        padding: 0 15px
